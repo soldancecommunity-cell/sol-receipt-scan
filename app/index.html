@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="apple-mobile-web-app-title" content="確定申告">
+<title>確定申告</title>
+<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-180.png">
+<style>
+:root{color-scheme:dark;--bg:#161615;--fg:#f2f1ed;--sub:#b4b2aa;--acc:#ec6a1e}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+section{display:grid;gap:16px}
+body{margin:0;min-height:100dvh;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,"Hiragino Sans",sans-serif;display:grid;align-content:center;gap:16px;padding-block:32px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1{margin:0;font-size:22px}
+p,ol{margin:0;color:var(--sub)}
+ol{padding-left:1.3em}
+img{width:96px;height:96px;border-radius:22px}
+a{display:flex;align-items:center;justify-content:center;min-height:56px;border-radius:14px;font-weight:700;text-decoration:none;background:var(--acc);color:#1b1106}
+</style>
+</head>
+<body>
+<section id="add" hidden>
+  <img src="icon-180.png" alt="確定申告アプリのアイコン">
+  <h1>ホーム画面に追加</h1>
+  <ol>
+    <li>下の共有ボタンを押す</li>
+    <li>「ホーム画面に追加」を押す</li>
+    <li>「Webアプリとして開く」が出たらオフにする</li>
+    <li>右上の「追加」を押す</li>
+  </ol>
+</section>
+<section id="open">
+  <p>確定申告アプリを開いています…</p>
+  <a id="go" href="https://claude.ai/artifact/UrzXpWGbrWukSMLAfNaXJX">確定申告アプリを開く</a>
+</section>
+<script>
+if (location.hash === '#add') {
+  document.getElementById('add').hidden = false;
+  document.getElementById('open').hidden = true;
+  history.replaceState(null, '', location.pathname); // ホーム画面にはこの案内が付かないアドレスで入る
+} else {
+  location.replace(document.getElementById('go').href);
+}
+</script>
+</body>
+</html>
