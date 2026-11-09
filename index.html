@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>領収書スキャン</title>
+<style>
+:root{color-scheme:dark;--bg:#161615;--fg:#f2f1ed;--sub:#b4b2aa;--acc:#ec6a1e;--line:#3a3935}
+*{box-sizing:border-box}
+body{margin:0;min-height:100dvh;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,"Hiragino Sans",sans-serif;display:grid;align-content:center;gap:18px;padding-block:32px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1{margin:0;font-size:22px}
+p{margin:0;color:var(--sub)}
+a{display:flex;align-items:center;justify-content:center;min-height:56px;border-radius:14px;font-weight:700;text-decoration:none}
+.go{background:var(--acc);color:#1b1106}
+.back{border:1px solid var(--line);color:var(--fg)}
+</style>
+</head>
+<body>
+<h1>領収書スキャン</h1>
+<p>スキャンの画面が開かない時は、下のボタンを押してください。確認が出たら「開く」を選びます。</p>
+<a class="go" id="go" href="shortcuts://run-shortcut?name=%E9%A0%98%E5%8F%8E%E6%9B%B8%E3%82%B9%E3%82%AD%E3%83%A3%E3%83%B3">スキャンを始める</a>
+<p>スキャンして保存したら、アプリに戻って「PDF を入れる」を押してください。</p>
+<a class="back" href="https://claude.ai/artifact/UrzXpWGbrWukSMLAfNaXJX">確定申告アプリに戻る</a>
+<script>location.href = document.getElementById('go').href;</script>
+</body>
+</html>
